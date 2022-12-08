@@ -1,0 +1,26 @@
+<annotation>
+	<folder>ImFuente</folder>
+	<filename>01 (47).jpg</filename>
+	<path>C:\Users\Txusel\Desktop\ProyectoEstancia\ImFuente\01 (47).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1600</width>
+		<height>1200</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Auto</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>256</xmin>
+			<ymin>403</ymin>
+			<xmax>1038</xmax>
+			<ymax>856</ymax>
+		</bndbox>
+	</object>
+</annotation>

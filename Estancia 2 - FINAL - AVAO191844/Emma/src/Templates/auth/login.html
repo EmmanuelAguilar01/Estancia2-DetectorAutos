@@ -1,0 +1,45 @@
+{% extends './base.html' %}
+
+{% block title %}INICIAR SESIÓN{% endblock %}
+
+{% block customCSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+
+{% block body %}
+<form class="form-signin" action="/login" method="POST">
+    <img class="mb-4" src="{{ url_for('static', filename='img/UP.png') }}" alt="" width="250" height="250">
+    {% with messages = get_flashed_messages() %}
+    
+    {% if messages %}
+    <br>
+    {% for message in messages %}
+    <div class="alert alert-primary alert-dismissible" role="alert">
+      <strong>{{message}}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    
+    {% endwith %}
+    
+    <h1 class="h3 mb-3 fw-normal">Ingrese Nombre y Contraseña</h1>
+    <input type="hidden" >
+    <div class="form-floating">
+      <input type="text" class="form-control" name="username" id="floatingInput" placeholder="username">
+      <label for="username">Usuario</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="password">
+      <label for="Password">Contraseña</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Recuerdame
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar</button>
+    <p class="mt-5 mb-3 text-muted">&copy; Estancia II Aguilar Vargas Antonio Emmanuel 7A - ITI - AVAO191844</p>
+  </form>
+  {% endblock %}
